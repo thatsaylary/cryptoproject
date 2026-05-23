@@ -37,16 +37,6 @@ export default function Header({ dark, setDark }) {
 
         {/* Правая часть */}
         <div className="flex items-center gap-3">
-          {/* Поиск */}
-          <div className="flex items-center gap-2 bg-gray-100 dark:bg-[#1e212c] border border-gray-200 dark:border-[#2a2d38] rounded-xl px-4 py-2">
-            <i className="ti ti-search text-gray-400 text-base" aria-hidden="true" />
-            <input
-              type="text"
-              placeholder="Поиск товаров..."
-              className="bg-transparent outline-none text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 w-36 font-sans"
-            />
-          </div>
-
           {/* Переключатель темы */}
           <button
             onClick={() => setDark(!dark)}

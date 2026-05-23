@@ -26,7 +26,7 @@ export default function Catalog() {
       </p>
 
       {/* Тулбар */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-5">
         <div className="flex gap-2">
           {categories.map((c) => (
             <button
@@ -50,32 +50,6 @@ export default function Catalog() {
         {filtered.map((p) => (
           <ProductCard key={p.id} product={p} />
         ))}
-      </div>
-
-      {/* Пагинация */}
-      <div className="flex items-center justify-between mt-6">
-        <div className="flex items-center gap-2 text-sm text-gray-400">
-          Показывать:
-          <select className="border border-gray-200 dark:border-[#2a2d38] rounded-lg px-2 py-1 text-sm bg-white dark:bg-[#1e212c] text-gray-700 dark:text-gray-300 outline-none">
-            <option>8</option>
-            <option selected>12</option>
-            <option>24</option>
-          </select>
-        </div>
-        <div className="flex gap-2">
-          {["‹", "1", "2", "›"].map((p, i) => (
-            <div
-              key={i}
-              className={`w-8 h-8 rounded-lg border flex items-center justify-center text-sm cursor-pointer transition-colors ${
-                p === "1"
-                  ? "bg-green-500 text-white border-green-500"
-                  : "bg-white dark:bg-[#1e212c] text-gray-500 dark:text-gray-400 border-gray-200 dark:border-[#2a2d38] hover:border-green-500"
-              }`}
-            >
-              {p}
-            </div>
-          ))}
-        </div>
       </div>
     </main>
   );
